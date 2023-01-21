@@ -1,0 +1,17 @@
+<launch>
+    
+
+    <node name="kittiHelper" pkg="aloam_velodyne" type="kittiHelper" output="screen"> 
+         <!-- <param name="dataset_folder" type="string" value="/home/xieqi/code/kitti_data/"--> 
+         
+        <param name="dataset_folder" type="string" value="/home/sjoeycookie/datasets/Kitti_data/" /><!-- 修改成自己的数据集路径，kitti数据集的存储格式要正确-->
+        <param name="sequence_number" type="string" value="00" />
+      
+        <param name="to_bag" type="bool" value="true" />  <!-- value为false时不输出bag文件，为true时生成bag文件 -->
+
+        <!-- <param name="output_bag_file" type="string" value="/home/xieqi/code/kitti_data/kitti.bag" />  -->
+        
+        <param name="output_bag_file" type="string" value="/home/sjoeycookie/datasets/kitti_0.bag" /> <!-- replace with your output folder -->
+        <param name="publish_delay" type="int" value="1" />
+    </node>
+</launch>
